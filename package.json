@@ -1,0 +1,12 @@
+{
+  "name": "iot-api",
+  "version": "1.0.0",
+  "description": "IoT API",
+  "main": "api.js",
+  "author": "PRO107",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "latest",
+    "request": "latest"
+  }
+}
