@@ -8,5 +8,8 @@
     "body-parser": "^1.16.0",
     "express": "latest",
     "request": "latest"
+  },
+  "scripts" : {
+    "start": "node index.js"
   }
 }
