@@ -10,7 +10,7 @@ app.post('/coffee', function(req, res){
     console.log('********');
     console.log(req.body);
     console.log('********');
-    //res.send(data);
+    res.send("ok");
 });
 
 app.listen(process.env.PORT || 8081);
