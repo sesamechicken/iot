@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.post('/coffee', function(req, res){
     //res.setHeader("Access-Control-Allow-Origin", "*");
     //var data = req.body.Message
-    console.log('+*-*-*-*-*-*-*-*-+');
+    console.log('+*-*-*-* MAIN APP -*-*-*-*-+');
     var json = JSON.parse(req.body);
     console.log(json);
 	  var msg = json.Message
@@ -19,7 +19,7 @@ app.post('/coffee', function(req, res){
     var msg_body = '(coffee) ' + msg
     console.log(msg);
     var notification = {color:"green",message:msg_body,notify:true,message_format:"text"};
-    console.log('+++*-*-*-*-**-*-*=+');
+    console.log('+++*-*- END MAIN APP *-*-**-*-*=+');
     request.post(
         hipchat,
         { json: notification },
