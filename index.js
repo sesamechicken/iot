@@ -15,7 +15,13 @@ app.post('/coffee', function(req, res){
     console.log(json);
 	  var msg = json.Message
     console.log('untouched msg -----> ', msg);
-    var hipchat = "https://fusionallianceinc.hipchat.com/v2/room/3157291/notification?auth_token=f8NgPgVMLYqwSmH5OsUHkCRegojDE4Y3kMT7vt1U";
+
+    // Kroger Multi Dev room
+    //var hipchat = "https://fusionallianceinc.hipchat.com/v2/room/3157291/notification?auth_token=f8NgPgVMLYqwSmH5OsUHkCRegojDE4Y3kMT7vt1U";
+
+    // CVG Digital Team
+    var hipchat = "https://fusionallianceinc.hipchat.com/v2/room/1202611/notification?auth_token=8xHwQ2CsBvQOfYc1oEIMb8NUU5JnyuPLJl9h4G7k"
+
     var msg_body = '(coffee) ' + msg
     console.log(msg);
     var notification = {color:"green",message:msg_body,notify:true,message_format:"text"};
