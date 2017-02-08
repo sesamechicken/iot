@@ -12,7 +12,8 @@ app.post('/coffee', function(req, res){
     //var data = req.body.Message
     console.log('+*-*-*-*-*-*-*-*-+');
     var json = JSON.parse(req.body);
-	  var msg = JSON.parse(json.Message)
+	  var msg = json.Message
+    console.log('untouched msg -----> ', msg);
     var hipchat = "https://fusionallianceinc.hipchat.com/v2/room/3157291/notification?auth_token=f8NgPgVMLYqwSmH5OsUHkCRegojDE4Y3kMT7vt1U";
     var msg_body = '(coffee) ' + JSON.parse(json.Message);
     console.log(msg);
