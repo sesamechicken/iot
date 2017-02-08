@@ -7,9 +7,9 @@
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "latest",
-    "request": "latest"
+    "request": "^2.79.0"
   },
-  "scripts" : {
+  "scripts": {
     "start": "node index.js"
   }
 }
