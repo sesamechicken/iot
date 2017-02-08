@@ -11,9 +11,9 @@ app.post('/coffee', function(req, res){
     //res.setHeader("Access-Control-Allow-Origin", "*");
     //var data = req.body.Message
     console.log('+*-*-*-*-*-*-*-*-+');
-    console.log(req.body.Message);
+    console.log(req.body);
     var hipchat = "https://fusionallianceinc.hipchat.com/v2/room/3157291/notification?auth_token=f8NgPgVMLYqwSmH5OsUHkCRegojDE4Y3kMT7vt1U"
-    var msg = '(coffee) ' + JSON.parse(json.Message);
+    var msg = '(coffee) ' + JSON.parse(req.body.Message);
     var notification = {color:"green",message:msg,"notify":true,"message_format":"text"}
     console.log('+++*-*-*-*-**-*-*=+');
     request.post(
