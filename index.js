@@ -24,7 +24,7 @@ app.post('/coffee', function(req, res){
         { json: notification },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                console.log(body)
+                console.log('fom the request.post call ' + body)
             }
         }
     );
