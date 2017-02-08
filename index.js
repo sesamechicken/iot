@@ -5,20 +5,12 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.post('/coffee', function(req, res){
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    //res.setHeader("Access-Control-Allow-Origin", "*");
     //var data = req.body.Message
-    console.log('********');
+    console.log('*-*-*-*-*-*-*-*-');
     console.log(req.headers);
-    console.log('********');
-    res.send("ok");
-});
-app.post('/coffees', function(req, res){
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    //var data = req.body.Message
-    console.log('********');
-    console.log(req.body);
-    console.log('********');
-    res.send("ok");
+    console.log('*-*-*-*-**-*-*');
+    res.status(200).json();
 });
 
 app.listen(process.env.PORT || 8081);
