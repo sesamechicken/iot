@@ -13,14 +13,13 @@ app.post('/coffee', function(req, res){
     console.log('+*-*-*-*-*-*-*-*-+');
     var json = JSON.parse(req.body);
 	  var msg = JSON.parse(json.Message)
-    var hipchat = "https://fusionallianceinc.hipchat.com/v2/room/3157291/notification?auth_token=f8NgPgVMLYqwSmH5OsUHkCRegojDE4Y3kMT7vt1U"
+    var hipchat = "https://fusionallianceinc.hipchat.com/v2/room/3157291/notification?auth_token=f8NgPgVMLYqwSmH5OsUHkCRegojDE4Y3kMT7vt1U";
     var msg_body = '(coffee) ' + JSON.parse(json.Message);
     console.log(msg);
     var notification = JSON.stringify({color:"green",message:msg_body,notify:true,message_format:"text"});
     console.log('+++*-*-*-*-**-*-*=+');
     request.post(
         hipchat,
-        json: true,
         { json: notification },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
