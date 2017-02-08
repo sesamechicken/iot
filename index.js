@@ -12,6 +12,14 @@ app.post('/coffee', function(req, res){
     console.log('********');
     res.send("ok");
 });
+app.post('/coffees', function(req, res){
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    //var data = req.body.Message
+    console.log('********');
+    console.log(req.body);
+    console.log('********');
+    res.send("ok");
+});
 
 app.listen(process.env.PORT || 8081);
 exports = module.exports = app;
