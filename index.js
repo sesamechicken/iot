@@ -17,7 +17,7 @@ app.post('/coffee', function(req, res){
     var hipchat = "https://fusionallianceinc.hipchat.com/v2/room/3157291/notification?auth_token=f8NgPgVMLYqwSmH5OsUHkCRegojDE4Y3kMT7vt1U";
     var msg_body = '(coffee) ' + msg
     console.log(msg);
-    var notification = JSON.stringify({color:"green",message:msg_body,notify:true,message_format:"text"});
+    var notification = {color:"green",message:msg_body,notify:true,message_format:"text"};
     console.log('+++*-*-*-*-**-*-*=+');
     request.post(
         hipchat,
