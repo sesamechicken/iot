@@ -8,7 +8,7 @@ app.post('/coffee', function(req, res){
     res.setHeader("Access-Control-Allow-Origin", "*");
     //var data = req.body.Message
     console.log('********');
-    console.log(req);
+    console.log(req.body.SubscribeURL);
     console.log('********');
     res.send("ok");
 });
